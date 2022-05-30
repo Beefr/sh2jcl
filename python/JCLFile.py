@@ -28,10 +28,13 @@ class JCLFile(object):
 				self._text=self._text+Commands(command, parameters).generateText()
 		return self._text
 
+	def end(self):
+		raise NotImplementedError("Hey, Don't forget to implement")
 
 	def generateFile(self):		
 		self._text=self.beginning()
 		self._text=self._text+self.core()
+		self._text=self._text+self.end()
 		return self._text
 
 	@property

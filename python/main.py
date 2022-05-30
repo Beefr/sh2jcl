@@ -1,5 +1,7 @@
 
 from Job import Job
+from Jcl import Jcl
+from Prc import Prc
 
 commandsFile='data.txt' # specifies what commands should be interpreted
 
@@ -13,13 +15,13 @@ def __main__(commandsFile, outputFileName, extension):
 
 	match extension:
 		case 'jcl':
-			return 'jcl'
+			return Jcl(commandsFile,outputFileName).generateFile()
 
 		case 'job':
 			return Job(commandsFile,outputFileName).generateFile()
 
 		case 'prc':
-			return 'prc' 
+			return Prc(commandsFile,outputFileName).generateFile() 
 
 		case _:
 			return ''			 
@@ -28,3 +30,10 @@ def __main__(commandsFile, outputFileName, extension):
 
 
 print(__main__(commandsFile, outputFileName, extension))
+print("____________________________________")
+
+print(__main__(commandsFile, outputFileName, 'jcl'))
+print("____________________________________")
+
+
+print(__main__(commandsFile, outputFileName, 'prc'))

@@ -26,7 +26,7 @@ class Commands(object):
 				return self.unique(self._parameters[0], self._parameters[1])
 
 			case 'first': #input, output, rows
-				return self.unique(self._parameters[0], self._parameters[1], self._parameters[2])
+				return self.first(self._parameters[0], self._parameters[1], self._parameters[2])
 
 			case 'sort': #input, output
 				return self.unique(self._parameters[0], self._parameters[1])

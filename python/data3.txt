@@ -1,1 +1,3 @@
-unique:user.dataset.input,user.dataset.output,
+unique:user.dataset.input,temp,
+sort:temp,temp,
+first:temp,user.dataset.output,10,

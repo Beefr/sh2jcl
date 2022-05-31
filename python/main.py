@@ -29,14 +29,14 @@ def __main__(commandsFile, outputFileName, extension):
 
 
 
-print(__main__(commandsFile, outputFileName, extension))
-print("____________________________________")
+#print(__main__(commandsFile, outputFileName, extension))
+#print("____________________________________")
 
-print(__main__('data2.txt', 'donothing', 'jcl'))
-print("____________________________________")
+#print(__main__('data2.txt', 'donothing', 'jcl'))
+#print("____________________________________")
 
 
-print(__main__('data3.txt', 'unique', 'prc'))
+print(__main__('data3.txt', 'tenfstunq', 'prc'))
 
 
 

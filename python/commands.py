@@ -29,7 +29,7 @@ class Commands(object):
 				return self.first(self._parameters[0], self._parameters[1], self._parameters[2])
 
 			case 'sort': #input, output
-				return self.unique(self._parameters[0], self._parameters[1])
+				return self.sort(self._parameters[0], self._parameters[1])
 
 			case _:
 				return ''

@@ -37,3 +37,32 @@ print("____________________________________")
 
 
 print(__main__('data3.txt', 'unique', 'prc'))
+
+
+
+"""
+copie d'un dataset 0 vers le 1 
+case 'copy': #input, output
+return self.copy(self._parameters[0], self._parameters[1])
+
+ne fait rien
+case 'donothing': 
+return self.donothing()
+
+supprime les elements redondants de 0 et mets le resultat dans 1
+case 'unique': #input, output
+return self.unique(self._parameters[0], self._parameters[1])
+
+récupère les rows premiers elements de 0 et les met dans 1
+case 'first': #input, output, rows
+return self.unique(self._parameters[0], self._parameters[1], self._parameters[2])
+
+trie les elements de 0 et les met dans 1
+case 'sort': #input, output
+return self.unique(self._parameters[0], self._parameters[1])
+
+
+"""
+
+
+

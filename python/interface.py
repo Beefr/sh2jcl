@@ -78,7 +78,9 @@ class Interface(metaclass=InterfaceMeta):
 			self._output.insert(INSERT,"No output filename was entered")
 			return None
 
-		instance =Jcl(self._arguments.get("1.0",END),outputFileName)
+		module = __import__(extension[0])
+		class_=getattr(module, extension[0])
+		instance =class_(self._arguments.get("1.0",END),outputFileName)
 		txt=instance.generateFile()
 		self._output.insert(INSERT, txt)
 		return 0
@@ -94,18 +96,18 @@ class Interface(metaclass=InterfaceMeta):
 		else:
 			match choice[0]:
 				case 0:
-					extension='job'
+					extension=('Job','job')
 				case 1:
-					extension='prc'
+					extension=('Prc','prc')
 				case 2:
-					extension='jcl'
+					extension=('Jcl','jcl')
 				case _:
-					extension=''
+					return None
 		return extension
 
 
 	def save(self):
-		f = open(self._outputFileName.get("1.0","end-1c")+"."+self.getExtension(), "w")
+		f = open(self._outputFileName.get("1.0","end-1c")+"."+self.getExtension()[1], "w")
 		f.write(self._output.get("1.0",END))
 		f.close()
 

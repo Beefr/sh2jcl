@@ -1,8 +1,10 @@
 
-from Job import Job
-from Jcl import Jcl
-from Prc import Prc
+from interface import Interface
 
+Interface()
+
+
+'''
 commandsFile='data.txt' # specifies what commands should be interpreted
 
 outputFileName='copy' # specifies the name that we want to be generated
@@ -26,17 +28,9 @@ def __main__(commandsFile, outputFileName, extension):
 		case _:
 			return ''			 
 
+'''
 
 
-
-#print(__main__(commandsFile, outputFileName, extension))
-#print("____________________________________")
-
-#print(__main__('data2.txt', 'donothing', 'jcl'))
-#print("____________________________________")
-
-
-print(__main__('data3.txt', 'tenfstunq', 'prc'))
 
 
 

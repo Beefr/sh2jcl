@@ -27,7 +27,7 @@ class Interface(metaclass=InterfaceMeta):
 
 
 	def __init__(self):
-		self._root = Tk(className=" JCL Generator")
+		self._root = Tk(className=" Another Neat JCL Generator")
 		self._root.geometry("1000x900")
 
 
